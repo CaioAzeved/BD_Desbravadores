@@ -196,16 +196,24 @@ values
 ('Attea Frog', '11294884763', 9,'84988112233','F');
 
 
-insert into tb_membro (
-  id_membro,
-  cargo,
-  id_contatoEmergencial,
-  grupo,
-  dt_nascimento,
-  id_unidade,
-)
+insert into tb_contatoEmergencial (nome, telefone)
 values
+('Marta Silva','84988556745');
+('Eliabe Fernandes','84987949431');
+('Adja Alexander','84983848598');
+('Ramilton Soares','84934567894');
+('Isabela Pinheiro','84935435321');
+('Austin Gouveia','84911127850');
+('Isaac Marlon','84955000653');
+('Patrick Dias','84984685200');
+('Mônica Magalhães','84920350960');
+('Selan Duarte','84913568653');
+('Athanasios Tsouanas','84945093390');
+('Rafaela Marinho','84978749321');
 
+insert into tb_membro (id_membro, cargo, id_contatoEmergencial, grupo, dt_nascimento, id_unidade)
+values
+();
 
 
 
