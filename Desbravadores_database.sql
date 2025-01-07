@@ -197,14 +197,14 @@ values
 
 insert into tb_doacao(id_doador, valor, metodoPagamento)
 values
-(9,200,'pix');
-(2,100,'pix');
-(5,55.70,'pix');
-(4,1000,'pix');
-(13,105,'pix');
-(19,30,'pix');
-(7,25.50,'dinheiro');
-(3,10.50,'dinheiro');
+(9, 200,'pix');
+(2, 100,'pix');
+(5, 55.70,'pix');
+(4, 1000,'pix');
+(13, 105,'pix');
+(19, 30,'pix');
+(7, 25.50,'dinheiro');
+(3, 10.50,'dinheiro');
 
 insert into tb_unidade (nome, genero, faixa_etaria)
 values
@@ -233,18 +233,18 @@ values
 
 insert into tb_membro (id_membro, cargo, id_contatoEmergencial, grupo, dt_nascimento, id_unidade)
 values
-(, '', , 'Liderança', '', );
+(20, '', , 'Liderança', '', );
 (8, 'Linda', 11, 'Liderança', '2003-06-30', );
-(, '', , 'Liderança', '', );
-(, '', , 'Desbravador', '', );
-(, '', , 'Desbravador', '', );
-(, '', , 'Desbravador', '', );
-(, '', , 'Desbravador', '', );
-(, '', , 'Desbravador', '', );
-(, '', , 'Desbravador', '', );
-(, '', , 'Desbravador', '', );
-(, '', , 'Desbravador', '', );
-(, '', , 'Desbravador', '', );
+(14, '', , 'Liderança', '', );
+(1, '', , 'Desbravador', '', );
+(18, '', , 'Desbravador', '', );
+(6, '', , 'Desbravador', '', );
+(17, '', , 'Desbravador', '', );
+(10, '', , 'Desbravador', '', );
+(11, '', , 'Desbravador', '', );
+(12, '', , 'Desbravador', '', );
+(15, '', , 'Desbravador', '', );
+(16, '', , 'Desbravador', '', );
 
 
 
