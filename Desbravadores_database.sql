@@ -195,6 +195,26 @@ values
 ('Antony Stark', '44592834721', 16,'84987945020','M');
 ('Attea Frog', '11294884763', 9,'84988112233','F');
 
+insert into tb_doacao(id_doador, valor, metodoPagamento)
+values
+(9,200,'pix');
+(2,100,'pix');
+(5,55.70,'pix');
+(4,1000,'pix');
+(13,105,'pix');
+(19,30,'pix');
+(7,25.50,'dinheiro');
+(3,10.50,'dinheiro');
+
+insert into tb_unidade (nome, genero, faixa_etaria)
+values
+('', 'L', '16+');
+('', '', '');
+('', '', '');
+('', '', '');
+('', '', '');
+('', '', '');
+
 
 insert into tb_contatoEmergencial (nome, telefone)
 values
@@ -231,3 +251,5 @@ values
 
 Select * from tb_endereco;
 Select * from tb_pessoa;
+Select * from tb_contatoEmergencial;
+Select * from tb_doacao;
