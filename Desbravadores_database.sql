@@ -138,12 +138,12 @@ VALUES
 ('Rua Pintor Geraldo de Azevedo', 'Mirassol', '300', 'apt. 805', 'Natal', 'RN', 'Brasil'),
 ('Travessa Piloto Mário Melo', 'Emaús', '67', NULL, 'Parnamirim', 'RN', 'Brasil'),
 ('Avenida Cristo Redentor', 'Nova Descoberta', '42', NULL, 'Natal', 'RN', 'Brasil'),
-('Avenida Lima e Silva', 'Lagoa Nova', '903', 'apt. 1003', 'Natal', 'RN', 'Brasil');
+('Avenida Lima e Silva', 'Lagoa Nova', '903', 'apt. 1003', 'Natal', 'RN', 'Brasil'),
 ('Avenida Hilton Souto Maior', 'Mangabeira VII', '4180', NULL, 'João Pessoa', 'PB', 'Brasil'),
-('Avenida das Tulipas', 'Capim Macio', '3560', NULL, 'Natal', 'RN', 'Brasil');
-('Rua Castro Alves', 'Alecrim', '300', 'casa', 'Natal', 'RN', 'Brasil');
-('Avenida Beira Canal', 'Tirol', '656', NULL, 'Natal', 'RN', 'Brasil');
-('Avenida Leste', 'Cidade Nova', '145', 'apt. 304', 'Natal', 'RN', 'Brasil');
+('Avenida das Tulipas', 'Capim Macio', '3560', NULL, 'Natal', 'RN', 'Brasil'),
+('Rua Castro Alves', 'Alecrim', '300', 'casa', 'Natal', 'RN', 'Brasil'),
+('Avenida Beira Canal', 'Tirol', '656', NULL, 'Natal', 'RN', 'Brasil'),
+('Avenida Leste', 'Cidade Nova', '145', 'apt. 304', 'Natal', 'RN', 'Brasil'),
 ('Avenida Erivan França', 'Ponta Negra', '6457', 'apt. 202', 'Natal', 'RN', 'Brasil');
 
 INSERT INTO tb_pessoa (nome, cpf, id_endereco, telefone, genero)
@@ -157,67 +157,67 @@ VALUES
 ('Erza Scarlet', '398489358673', 7, '84910103124', 'F'),
 ('Hannah Beatryz','13155464933', 7,'83987063599','F'),
 ('Hannah Beatris','13155494633', 6, '83987093566','F'),
-('Gon Freecs', '33849930466', 8, '84945678324', 'M');
-('Killua Zoldyck', '83456739488', 8, '84988342776', 'M');
-('Natsu Dragnell', '875643890931', 10, '84988339945', 'M');
-('Ingrid Barbalhos', '23554382392', 11,'84960604477','F');
-('Benjamin Tennyson', '11120938245', 9,'84983945676','M');
-('Kevin Levin', '93445398204', 12,'84985034422','M');
-('Erza Nightwalker', '94302911142', 13,'84980809090','F');
-('Kuroko Tetsuya', '77182304938', 14,'84933242258','M');
-('Rayla Storm', '38455679203', 15,'84999384611','F');
-('Antony Stark', '44592834721', 16,'84987945020','M');
+('Gon Freecs', '33849930466', 8, '84945678324', 'M'),
+('Killua Zoldyck', '83456739488', 8, '84988342776', 'M'),
+('Natsu Dragnell', '875643890931', 10, '84988339945', 'M'),
+('Ingrid Barbalhos', '23554382392', 11,'84960604477','F'),
+('Benjamin Tennyson', '11120938245', 9,'84983945676','M'),
+('Kevin Levin', '93445398204', 12,'84985034422','M'),
+('Erza Nightwalker', '94302911142', 13,'84980809090','F'),
+('Kuroko Tetsuya', '77182304938', 14,'84933242258','M'),
+('Rayla Storm', '38455679203', 15,'84999384611','F'),
+('Antony Stark', '44592834721', 16,'84987945020','M'),
 ('Attea Frog', '11294884763', 9,'84988112233','F');
 
-insert into tb_doacao(id_doador, valor, metodoPagamento)
-values
-(9, 200,'pix');
-(2, 100,'pix');
-(5, 55.70,'pix');
-(4, 1000,'pix');
-(13, 105,'pix');
-(19, 30,'pix');
-(7, 25.50,'dinheiro');
-(3, 10.50,'dinheiro');
+INSERT INTO tb_doacao(id_doador, valor, metodoPagamento)
+VALUES
+(9, 200,'Pix'),
+(2, 100,'Pix'),
+(5, 55.70,'Pix'),
+(4, 1000,'Pix'),
+(13, 105,'Pix'),
+(19, 30,'Pix'),
+(7, 25.50,'Dinheiro'),
+(3, 10.50,'Dinheiro'),
 
-insert into tb_unidade (nome, genero, faixa_etaria)
-values
-('', 'L', '16+');
-('', '', '');
-('', '', '');
-('', '', '');
-('', '', '');
+INSERT INTO tb_unidade (nome, genero, faixa_etaria)
+VALUES
+('', 'L', '16+'),
+('', '', ''),
+('', '', ''),
+('', '', ''),
+('', '', ''),
 ('', '', '');
 
 
-insert into tb_contatoEmergencial (nome, telefone)
-values
-('Marta Silva','84988556745');
-('Eliabe Fernandes','84987949431');
-('Adja Alexander','84983848598');
-('Ramilton Soares','84934567894');
-('Isabela Pinheiro','84935435321');
-('Austin Gouveia','84911127850');
-('Isaac Marlon','84955000653');
-('Patrick Dias','84984685200');
-('Mônica Magalhães','84920350960');
-('Selan Duarte','84913568653');
-('Athanasios Tsouanas','84945093390');
+INSERT INTO tb_contatoEmergencial (nome, telefone)
+VALUES
+('Marta Silva','84988556745'),
+('Eliabe Fernandes','84987949431'),
+('Adja Alexander','84983848598'),
+('Ramilton Soares','84934567894'),
+('Isabela Pinheiro','84935435321'),
+('Austin Gouveia','84911127850'),
+('Isaac Marlon','84955000653'),
+('Patrick Dias','84984685200'),
+('Mônica Magalhães','84920350960'),
+('Selan Duarte','84913568653'),
+('Athanasios Tsouanas','84945093390'),
 ('Rafaela Marinho','84978749321');
 
-insert into tb_membro (id_membro, cargo, id_contatoEmergencial, grupo, dt_nascimento, id_unidade)
-values
-(20, '', , 'Liderança', '', );
-(8, 'Linda', 11, 'Liderança', '2003-06-30', );
-(14, '', , 'Liderança', '', );
-(1, '', , 'Desbravador', '', );
-(18, '', , 'Desbravador', '', );
-(6, '', , 'Desbravador', '', );
-(17, '', , 'Desbravador', '', );
-(10, '', , 'Desbravador', '', );
-(11, '', , 'Desbravador', '', );
-(12, '', , 'Desbravador', '', );
-(15, '', , 'Desbravador', '', );
+INSERT INTO tb_membro (id_membro, cargo, id_contatoEmergencial, grupo, dt_nascimento, id_unidade)
+VALUES
+(20, '', , 'Liderança', '', ),
+(8, 'Linda', 11, 'Liderança', '2003-06-30', ),
+(14, '', , 'Liderança', '', ),
+(1, '', , 'Desbravador', '', ),
+(18, '', , 'Desbravador', '', ),
+(6, '', , 'Desbravador', '', ),
+(17, '', , 'Desbravador', '', ),
+(10, '', , 'Desbravador', '', ),
+(11, '', , 'Desbravador', '', ),
+(12, '', , 'Desbravador', '', ),
+(15, '', , 'Desbravador', '', ),
 (16, '', , 'Desbravador', '', );
 
 
