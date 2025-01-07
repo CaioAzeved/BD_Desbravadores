@@ -115,20 +115,20 @@ CREATE TABLE tb_membro_classe (
 
 COMMENT ON COLUMN tb_pessoa.genero IS 'M or F';
 
-COMMENT ON COLUMN tb_membro.grupo IS 'desbravador ou liderança';
+COMMENT ON COLUMN tb_membro.grupo IS 'Desbravador ou Liderança';
 
 COMMENT ON COLUMN tb_unidade.genero IS 'M, F ou L(unidade de Liderança)';
 
-COMMENT ON COLUMN tb_unidade.faixa_etaria IS 'Escrever qual a faixa etária comum para os desbravadores, ex.: 10-12; caso unidade de liderança, escrever: ''16+''';
+COMMENT ON COLUMN tb_unidade.faixa_etaria IS "Escrever qual a faixa etária comum para os desbravadores, ex.: '10-12'; caso unidade de liderança, escrever: '16+'";
 
 COMMENT ON COLUMN tb_endereco.estado IS 'Sigla do estado';
 
 COMMENT ON COLUMN tb_membro_evento.taxaSituacao IS 'Pago, Isento ou Pendente';
 
-COMMENT ON COLUMN tb_doacao.metodoPagamento IS 'pix, dinheiro';
+COMMENT ON COLUMN tb_doacao.metodoPagamento IS 'Pix, Dinheiro';
 
-insert into tb_endereco (logradouro, bairro, numero, complemento, cidade, estado, pais)
-values
+INSERT INTO tb_endereco (logradouro, bairro, numero, complemento, cidade, estado, pais)
+VALUES
 ('Rua Senador da Silva', 'Neópolis', '2023', NULL, 'Natal', 'RN', 'Brasil'),
 ('Avenida Santa Teresa', 'CEHAB', '45', NULL, 'Macaíba', 'RN', 'Brasil'),
 ('Rua Francisco Alencar', 'Petrópolis', '1010', 'apt. 102', 'Natal', 'RN', 'Brasil'),
@@ -140,17 +140,17 @@ values
 ('Avenida Cristo Redentor', 'Nova Descoberta', '42', NULL, 'Natal', 'RN', 'Brasil'),
 ('Avenida Lima e Silva', 'Lagoa Nova', '903', 'apt. 1003', 'Natal', 'RN', 'Brasil');
 
-insert into tb_pessoa (nome, cpf, id_endereco, telefone, genero)
-values 
-('Mateus', '12343234521', 1, '84993247164', 'M'),
-('Maria', '09876789543', 2, '87996785432', 'F'), 
-(),
-(),
-(),
-(),
-(),
-(),
-(),
+INSERT INTO tb_pessoa (nome, cpf, id_endereco, telefone, genero)
+VALUES
+('Mateus Gomes da Silva', '32343234521', 1, '84993247164', 'M'),
+('Maria das Graças Vieira Lima', '29876789543', 2, '87996785432', 'F'), 
+('Almir Penaforte Souza Neto', '33756392837', 3, '84993768527', 'M'),
+('Fernanda Lima Duarte Xavier', '37484636284', 4, '84995648372', 'F'),
+('Alice Maria Silva Santos', '48574823432', 5, '84993475628', 'F'),
+('Yasmin Emily Cavalcante Dias', '57684732398', 6, '84997658374', 'F'),
+('Valter Gondim', '54573829985', 7, '84995738413', 'M'),
+('Larissa Gomes Marques', ''),
+('Aurora Ellen Duarte Xavier', '56473829475', 4, '84995430753', 'F'),
 ();
 
 Select * from tb_endereco;
