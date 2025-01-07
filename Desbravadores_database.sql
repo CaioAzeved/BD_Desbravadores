@@ -159,15 +159,15 @@ values
 ('Hannah Beatris','13155494633', 6, '83987093566','F'),
 ('Gon Freecs', '33849930466', 8, '84945678324', 'M');
 ('Killua Zoldyck', '83456739488', 8, '84988342776', 'M');
-('Natsu Dragnell', '', 10, );
-('Gon Freecs', );
-('Gon Freecs', );
-('Gon Freecs', );
-('Gon Freecs', );
-('Gon Freecs', );
-('Gon Freecs', );
-('Gon Freecs', );
-('Gon Freecs', );
+('Natsu Dragnell', '875643890931', 10, '84988339945', 'M');
+('Ingrid Barbalhos', '23554382392', 11,'84960604477','F');
+('Benjamin Tennyson', '11120938245', 9,'84983945676','M');
+('Kevin Levin', '93445398204', 12,'84985034422','M');
+('Erza Nightwalker', '94302911142', 13,'84980809090','F');
+('Kuroko Tetsuya', '77182304938', 14,'84933242258','M');
+('Rayla Storm', '38455679203', 15,'84999384611','F');
+('Antony Stark', '44592834721', 16,'84987945020','M');
+('Attea Frog', '11294884763', 9,'84988112233','F');
 
 
 
