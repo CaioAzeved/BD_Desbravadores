@@ -115,7 +115,7 @@ CREATE TABLE tb_membro_classe (
 
 COMMENT ON COLUMN tb_pessoa.genero IS 'M or F';
 
-COMMENT ON COLUMN tb_membro.grupo IS 'desbravador ou liderança';
+COMMENT ON COLUMN tb_membro.grupo IS 'Desbravador ou Liderança';
 
 COMMENT ON COLUMN tb_unidade.genero IS 'M, F ou L(unidade de Liderança)';
 
@@ -213,7 +213,19 @@ values
 
 insert into tb_membro (id_membro, cargo, id_contatoEmergencial, grupo, dt_nascimento, id_unidade)
 values
-();
+(, '', , 'Liderança', '', );
+(8, 'Linda', 11, 'Liderança', '2003-06-30', );
+(, '', , 'Liderança', '', );
+(, '', , 'Desbravador', '', );
+(, '', , 'Desbravador', '', );
+(, '', , 'Desbravador', '', );
+(, '', , 'Desbravador', '', );
+(, '', , 'Desbravador', '', );
+(, '', , 'Desbravador', '', );
+(, '', , 'Desbravador', '', );
+(, '', , 'Desbravador', '', );
+(, '', , 'Desbravador', '', );
+
 
 
 
