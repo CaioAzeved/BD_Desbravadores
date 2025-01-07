@@ -139,19 +139,37 @@ values
 ('Travessa Piloto Mário Melo', 'Emaús', '67', NULL, 'Parnamirim', 'RN', 'Brasil'),
 ('Avenida Cristo Redentor', 'Nova Descoberta', '42', NULL, 'Natal', 'RN', 'Brasil'),
 ('Avenida Lima e Silva', 'Lagoa Nova', '903', 'apt. 1003', 'Natal', 'RN', 'Brasil');
+('Avenida Hilton Souto Maior', 'Mangabeira VII', '4180', NULL, 'João Pessoa', 'PB', 'Brasil'),
+('Avenida das Tulipas', 'Capim Macio', '3560', NULL, 'Natal', 'RN', 'Brasil');
+('Rua Castro Alves', 'Alecrim', '300', 'casa', 'Natal', 'RN', 'Brasil');
+('Avenida Beira Canal', 'Tirol', '656', NULL, 'Natal', 'RN', 'Brasil');
+('Avenida Leste', 'Cidade Nova', '145', 'apt. 304', 'Natal', 'RN', 'Brasil');
+('Avenida Erivan França', 'Ponta Negra', '6457', 'apt. 202', 'Natal', 'RN', 'Brasil');
 
 insert into tb_pessoa (nome, cpf, id_endereco, telefone, genero)
 values 
-('Mateus', '12343234521', 1, '84993247164', 'M'),
-('Maria', '09876789543', 2, '87996785432', 'F'), 
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-();
+('Mateus Raimundo', '12343234521', 1, '84993247164', 'M'),
+('Maria Marciano', '09876789543', 2, '87996785432', 'F'), 
+('Klebson Dantas', '23940128394', 10, '84987234590', 'M'),
+('Nova Chrono', '29354000239', 3, '84988684543', 'M'),
+('Neferpitou Ant', '99999999999', 5, '84986554533', 'F'),
+('Yusuha Usagi', '00022837755', 4, '84921017944', 'F'),
+('Erza Scarlet', '398489358673', 7, '84910103124', 'F'),
+('Hannah Beatryz','13155464933', 7,'83987063599','F'),
+('Hannah Beatris','13155494633', 6, '83987093566','F'),
+('Gon Freecs', '33849930466', 8, '84945678324', 'M');
+('Killua Zoldyck', '83456739488', 8, '84988342776', 'M');
+('Natsu Dragnell', '', 10, );
+('Gon Freecs', );
+('Gon Freecs', );
+('Gon Freecs', );
+('Gon Freecs', );
+('Gon Freecs', );
+('Gon Freecs', );
+('Gon Freecs', );
+('Gon Freecs', );
+
+
 
 Select * from tb_endereco;
 Select * from tb_pessoa;
