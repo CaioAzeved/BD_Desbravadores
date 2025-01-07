@@ -139,19 +139,91 @@ VALUES
 ('Travessa Piloto Mário Melo', 'Emaús', '67', NULL, 'Parnamirim', 'RN', 'Brasil'),
 ('Avenida Cristo Redentor', 'Nova Descoberta', '42', NULL, 'Natal', 'RN', 'Brasil'),
 ('Avenida Lima e Silva', 'Lagoa Nova', '903', 'apt. 1003', 'Natal', 'RN', 'Brasil');
+('Avenida Hilton Souto Maior', 'Mangabeira VII', '4180', NULL, 'João Pessoa', 'PB', 'Brasil'),
+('Avenida das Tulipas', 'Capim Macio', '3560', NULL, 'Natal', 'RN', 'Brasil');
+('Rua Castro Alves', 'Alecrim', '300', 'casa', 'Natal', 'RN', 'Brasil');
+('Avenida Beira Canal', 'Tirol', '656', NULL, 'Natal', 'RN', 'Brasil');
+('Avenida Leste', 'Cidade Nova', '145', 'apt. 304', 'Natal', 'RN', 'Brasil');
+('Avenida Erivan França', 'Ponta Negra', '6457', 'apt. 202', 'Natal', 'RN', 'Brasil');
 
 INSERT INTO tb_pessoa (nome, cpf, id_endereco, telefone, genero)
-VALUES
-('Mateus Gomes da Silva', '32343234521', 1, '84993247164', 'M'),
-('Maria das Graças Vieira Lima', '29876789543', 2, '87996785432', 'F'), 
-('Almir Penaforte Souza Neto', '33756392837', 3, '84993768527', 'M'),
-('Fernanda Lima Duarte Xavier', '37484636284', 4, '84995648372', 'F'),
-('Alice Maria Silva Santos', '48574823432', 5, '84993475628', 'F'),
-('Yasmin Emily Cavalcante Dias', '57684732398', 6, '84997658374', 'F'),
-('Valter Gondim', '54573829985', 7, '84995738413', 'M'),
-('Larissa Gomes Marques', ''),
-('Aurora Ellen Duarte Xavier', '56473829475', 4, '84995430753', 'F'),
-();
+VALUES 
+('Mateus Raimundo', '12343234521', 1, '84993247164', 'M'),
+('Maria Marciano', '09876789543', 2, '87996785432', 'F'), 
+('Klebson Dantas', '23940128394', 10, '84987234590', 'M'),
+('Nova Chrono', '29354000239', 3, '84988684543', 'M'),
+('Neferpitou Ant', '99999999999', 5, '84986554533', 'F'),
+('Yusuha Usagi', '00022837755', 4, '84921017944', 'F'),
+('Erza Scarlet', '398489358673', 7, '84910103124', 'F'),
+('Hannah Beatryz','13155464933', 7,'83987063599','F'),
+('Hannah Beatris','13155494633', 6, '83987093566','F'),
+('Gon Freecs', '33849930466', 8, '84945678324', 'M');
+('Killua Zoldyck', '83456739488', 8, '84988342776', 'M');
+('Natsu Dragnell', '875643890931', 10, '84988339945', 'M');
+('Ingrid Barbalhos', '23554382392', 11,'84960604477','F');
+('Benjamin Tennyson', '11120938245', 9,'84983945676','M');
+('Kevin Levin', '93445398204', 12,'84985034422','M');
+('Erza Nightwalker', '94302911142', 13,'84980809090','F');
+('Kuroko Tetsuya', '77182304938', 14,'84933242258','M');
+('Rayla Storm', '38455679203', 15,'84999384611','F');
+('Antony Stark', '44592834721', 16,'84987945020','M');
+('Attea Frog', '11294884763', 9,'84988112233','F');
+
+insert into tb_doacao(id_doador, valor, metodoPagamento)
+values
+(9, 200,'pix');
+(2, 100,'pix');
+(5, 55.70,'pix');
+(4, 1000,'pix');
+(13, 105,'pix');
+(19, 30,'pix');
+(7, 25.50,'dinheiro');
+(3, 10.50,'dinheiro');
+
+insert into tb_unidade (nome, genero, faixa_etaria)
+values
+('', 'L', '16+');
+('', '', '');
+('', '', '');
+('', '', '');
+('', '', '');
+('', '', '');
+
+
+insert into tb_contatoEmergencial (nome, telefone)
+values
+('Marta Silva','84988556745');
+('Eliabe Fernandes','84987949431');
+('Adja Alexander','84983848598');
+('Ramilton Soares','84934567894');
+('Isabela Pinheiro','84935435321');
+('Austin Gouveia','84911127850');
+('Isaac Marlon','84955000653');
+('Patrick Dias','84984685200');
+('Mônica Magalhães','84920350960');
+('Selan Duarte','84913568653');
+('Athanasios Tsouanas','84945093390');
+('Rafaela Marinho','84978749321');
+
+insert into tb_membro (id_membro, cargo, id_contatoEmergencial, grupo, dt_nascimento, id_unidade)
+values
+(20, '', , 'Liderança', '', );
+(8, 'Linda', 11, 'Liderança', '2003-06-30', );
+(14, '', , 'Liderança', '', );
+(1, '', , 'Desbravador', '', );
+(18, '', , 'Desbravador', '', );
+(6, '', , 'Desbravador', '', );
+(17, '', , 'Desbravador', '', );
+(10, '', , 'Desbravador', '', );
+(11, '', , 'Desbravador', '', );
+(12, '', , 'Desbravador', '', );
+(15, '', , 'Desbravador', '', );
+(16, '', , 'Desbravador', '', );
+
+
+
 
 Select * from tb_endereco;
 Select * from tb_pessoa;
+Select * from tb_contatoEmergencial;
+Select * from tb_doacao;
