@@ -127,6 +127,32 @@ COMMENT ON COLUMN tb_membro_evento.taxaSituacao IS 'Pago, Isento ou Pendente';
 
 COMMENT ON COLUMN tb_doacao.metodoPagamento IS 'pix, dinheiro';
 
+ALTER TABLE "tb_membro" ADD FOREIGN KEY ("id_membro") REFERENCES "tb_pessoa" ("id_pessoa");
+
+ALTER TABLE "tb_membro" ADD FOREIGN KEY ("id_unidade") REFERENCES "tb_unidade" ("id_unidade");
+
+ALTER TABLE "tb_membro" ADD FOREIGN KEY ("id_contatoEmergencial") REFERENCES "tb_contatoEmergencial" ("id_contatoEmergencial");
+
+ALTER TABLE "tb_membro_especialidade" ADD FOREIGN KEY ("id_membro") REFERENCES "tb_membro" ("id_membro");
+
+ALTER TABLE "tb_membro_especialidade" ADD FOREIGN KEY ("id_especialidade") REFERENCES "tb_especialidade" ("codigo");
+
+ALTER TABLE "tb_membro_especialidade" ADD FOREIGN KEY ("id_instrutor") REFERENCES "tb_membro" ("id_membro");
+
+ALTER TABLE "tb_evento" ADD FOREIGN KEY ("organizador") REFERENCES "tb_membro" ("id_membro");
+
+ALTER TABLE "tb_membro_evento" ADD FOREIGN KEY ("id_membro") REFERENCES "tb_membro" ("id_membro");
+
+ALTER TABLE "tb_membro_evento" ADD FOREIGN KEY ("id_evento") REFERENCES "tb_evento" ("id_evento");
+
+ALTER TABLE "tb_doacao" ADD FOREIGN KEY ("id_doador") REFERENCES "tb_pessoa" ("id_pessoa");
+
+ALTER TABLE "tb_membro_classe" ADD FOREIGN KEY ("id_membro") REFERENCES "tb_membro" ("id_membro");
+
+ALTER TABLE "tb_membro_classe" ADD FOREIGN KEY ("id_classe") REFERENCES "tb_classe" ("id_classe");
+
+ALTER TABLE "tb_pessoa" ADD FOREIGN KEY ("id_endereco") REFERENCES "tb_endereco" ("id_endereco");
+
 insert into tb_endereco (logradouro, bairro, numero, complemento, cidade, estado, pais)
 values
 ('Rua Senador da Silva', 'Neópolis', '2023', NULL, 'Natal', 'RN', 'Brasil'),
@@ -168,6 +194,18 @@ values
 ('Rayla Storm', '38455679203', 15,'84999384611','F');
 ('Antony Stark', '44592834721', 16,'84987945020','M');
 ('Attea Frog', '11294884763', 9,'84988112233','F');
+
+
+insert into tb_membro (
+  id_membro,
+  cargo,
+  id_contatoEmergencial,
+  grupo,
+  dt_nascimento,
+  id_unidade,
+)
+values
+
 
 
 
