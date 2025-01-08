@@ -184,12 +184,12 @@ VALUES
 
 INSERT INTO tb_unidade (nome, genero, faixa_etaria)
 VALUES
-('', 'L', '16+'),
-('', '', ''),
-('', '', ''),
-('', '', ''),
-('', '', ''),
-('', '', '');
+('Avante Desbravadores', 'L', '16+'),
+('Bando do Falcão', 'M', '10-15'),
+('Tríade da Ameaça Tripla', 'M', '13-15'),
+('Amazonas Guerreiras', 'F', '10-12'),
+('Zurafa Flamejante', 'F', '12-15'),
+('Mancha Azul', 'F', '11-14');
 
 
 INSERT INTO tb_contatoEmergencial (nome, telefone)
@@ -209,9 +209,9 @@ VALUES
 
 INSERT INTO tb_membro (id_membro, cargo, id_contatoEmergencial, grupo, dt_nascimento, id_unidade)
 VALUES
-(20, '', , 'Liderança', '', ),
-(8, 'Linda', 11, 'Liderança', '2003-06-30', ),
-(14, '', , 'Liderança', '', ),
+(20, '', , 'Liderança', '', 1),
+(8, 'Linda', 11, 'Liderança', '2003-06-30', 1),
+(14, '', , 'Liderança', '', 1),
 (1, '', , 'Desbravador', '', ),
 (18, '', , 'Desbravador', '', ),
 (6, '', , 'Desbravador', '', ),
