@@ -150,26 +150,27 @@ VALUES
 
 INSERT INTO tb_pessoa (nome, cpf, id_endereco, telefone, genero)
 VALUES 
-('Mateus Raimundo', '12343234521', 1, '84993247164', 'M'),
+('Mateus Raimundo', '12343234521', 1, '84993247164', 'M'), --desbravador
 ('Maria Marciano', '09876789543', 2, '87996785432', 'F'), 
 ('Klebson Dantas', '23940128394', 10, '84987234590', 'M'),
 ('Nova Chrono', '29354000239', 3, '84988684543', 'M'),
 ('Neferpitou Ant', '99999999999', 5, '84986554533', 'F'),
 ('Yusuha Usagi', '00022837755', 4, '84921017944', 'F'),
 ('Erza Scarlet', '398489358673', 7, '84910103124', 'F'),
-('Hannah Beatryz','13155464933', 7,'83987063599','F'),
+('Hannah Beatryz','13155464933', 7,'83987063599','F'), --desbravador
 ('Hannah Beatris','13155494633', 6, '83987093566','F'),
-('Gon Freecs', '33849930466', 8, '84945678324', 'M'),
-('Killua Zoldyck', '83456739488', 8, '84988342776', 'M'),
-('Natsu Dragnell', '875643890931', 10, '84988339945', 'M'),
+('Gon Freecs', '33849930466', 8, '84945678324', 'M'), --desbravador
+('Killua Zoldyck', '83456739488', 8, '84988342776', 'M'), --desbravador
+('Natsu Dragnell', '875643890931', 10, '84988339945', 'M'), --desbravador
 ('Ingrid Barbalhos', '23554382392', 11,'84960604477','F'),
 ('Benjamin Tennyson', '11120938245', 9,'84983945676','M'),
-('Kevin Levin', '93445398204', 12,'84985034422','M'),
-('Erza Nightwalker', '94302911142', 13,'84980809090','F'),
-('Kuroko Tetsuya', '77182304938', 14,'84933242258','M'),
-('Rayla Storm', '38455679203', 15,'84999384611','F'),
+('Kevin Levin', '93445398204', 12,'84985034422','M'), --desbravador
+('Erza Nightwalker', '94302911142', 13,'84980809090','F'), --desbravador
+('Kuroko Tetsuya', '77182304938', 14,'84933242258','M'), --desbravador
+('Rayla Storm', '38455679203', 15,'84999384611','F'), --desbravador
 ('Antony Stark', '44592834721', 16,'84987945020','M'),
-('Attea Frog', '11294884763', 9,'84988112233','F');
+('Attea Frog', '11294884763', 9,'84988112233','F'), --desbravador
+();
 
 INSERT INTO tb_doacao(id_doador, valor, metodoPagamento)
 VALUES
@@ -178,7 +179,9 @@ VALUES
 (5, 55.70,'Pix'),
 (4, 1000,'Pix'),
 (13, 105,'Pix'),
-(19, 30,'Pix'),
+(19, 30,'Pix')
+(14, 200, 'Pix'),
+(20, 201, 'Pix'),
 (7, 25.50,'Dinheiro'),
 (3, 10.50,'Dinheiro');
 
@@ -209,18 +212,18 @@ VALUES
 
 INSERT INTO tb_membro (id_membro, cargo, id_contatoEmergencial, grupo, dt_nascimento, id_unidade)
 VALUES
-(20, '', , 'Liderança', '', 1),
+(20, '', , 'Liderança', '1990-10-17', 1),
 (8, 'Linda', 11, 'Liderança', '2003-06-30', 1),
-(14, '', , 'Liderança', '', 1),
-(1, '', , 'Desbravador', '', ),
-(18, '', , 'Desbravador', '', ),
-(6, '', , 'Desbravador', '', ),
-(17, '', , 'Desbravador', '', ),
-(10, '', , 'Desbravador', '', ),
-(11, '', , 'Desbravador', '', ),
-(12, '', , 'Desbravador', '', ),
-(15, '', , 'Desbravador', '', ),
-(16, '', , 'Desbravador', '', );
+(14, '', , 'Liderança', '1989-03-18', 1),
+(1, '', , 'Desbravador', '', 2),
+(18, '', , 'Desbravador', '', 4),
+(6, '', , 'Desbravador', '', 5),
+(17, '', , 'Desbravador', '', 2),
+(10, '', , 'Desbravador', '2011-05-05', 3),
+(11, '', , 'Desbravador', '2011-07-07', 3),
+(12, '', , 'Desbravador', '2009-12-12', 3),
+(15, '', , 'Desbravador', '', 2),
+(16, '', , 'Desbravador', '', 4);
 
 
 
