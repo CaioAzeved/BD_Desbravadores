@@ -34,22 +34,26 @@ Select count(*) from tb_pessoa where not id_pessoa in (Select id_membro from tb_
 
 -- h)Faça um consulta com a união de 3 tabelas (utilize qualquer JOIN) e que seu resultado
 --seja de ordem crescente
--- Descrição: 
+-- Descrição: Conseguir o nome dos membros que fizeram doações
 
--- i)
+-- i)Crie uma função que retorna a uma tabela. A função deve ter condições.
+-- Descrição: Retornar a tabela das especialidades desde que o número de membros que as possuem seja maior ou igual a 3
+
+-- j) Crie uma função que processam um conjunto de valores e retornam a um valor
+-- Descrição: Será passado um array com os ids das doações e será retornado o nome do doador que fez a maior doação
+
+-- k) Crie uma função VOID (Não retorna a nenhum valor mas executa alguma operação)
+-- Descrição: Modificar o cargo de algum membro
+
+-- l)Crie uma função da sua preferência que utilize funções de agregação (AVG, SUM,
+--COUNT, MIN ou MAX) operadores especiais, relacionais, JOIN, GROUP BY e
+--ORDER BY)
 -- Descrição:
 
--- j)
--- Descrição:
-
--- k)
--- Descrição:
-
--- l)
--- Descrição:
-
--- m)
--- Descrição:
+-- m)Crie um trigger que dispare dados em alguma tabela após de alguma ação no banco de
+--dados
+-- Descrição: Trigger colocará as datas de atualização automaticamente após a dar update
+-- em qualquer uma das tabelas
 
 -- n) Crie um trigger de verificação antes de executar alguma ação no banco de dados
 -- Descrição: trigger para verificar se um desbravador pode virar da liderança
