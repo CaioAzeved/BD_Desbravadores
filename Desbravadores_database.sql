@@ -192,16 +192,6 @@ VALUES
 (7, 25.50,'Dinheiro'),
 (3, 10.50,'Dinheiro');
 
-INSERT INTO tb_unidade (nome, genero, faixa_etaria)
-VALUES
-('Avante Desbravadores', 'L', '16+'),
-('Bando do Falcão', 'M', '10-15'),
-('Tríade da Ameaça Tripla', 'M', '13-15'),
-('Amazonas Guerreiras', 'F', '10-12'),
-('Zurafa Flamejante', 'F', '12-15'),
-('Mancha Azul', 'F', '11');
-
-
 INSERT INTO tb_contatoEmergencial (nome, telefone)
 VALUES
 ('Marta Silva','84988556745'),
@@ -218,23 +208,32 @@ VALUES
 ('Rafaela Marinho','84978749321'),
 ('Professor Utônio','84988689644');
 
+INSERT INTO tb_unidade (nome, genero, faixa_etaria)
+VALUES
+('Avante Desbravadores', 'L', '16+'),
+('Bando do Falcão', 'M', '10-15'),
+('Tríade da Ameaça Tripla', 'M', '13-15'),
+('Amazonas Guerreiras', 'F', '10-12'),
+('Zurafa Flamejante', 'F', '12-14'),
+('Mancha Azul', 'F', '11');
+
 INSERT INTO tb_membro (id_membro, cargo, id_contatoEmergencial, grupo, dt_nascimento, id_unidade)
 VALUES
 (20, '', 1, 'Liderança', '1990-10-17', 1),
 (8, 'Linda', 11, 'Liderança', '2003-06-30', 1),
 (14, '', 1, 'Liderança', '1989-03-18', 1),
-(1, '', 2, 'Desbravador', '', 2),
-(18, '', 3, 'Desbravador', '', 4),
-(6, '', 12, 'Desbravador', '', 4),
-(17, '', 4, 'Desbravador', '', 2),
+(1, '', 2, 'Desbravador', '2014-10-12', 2),
+(18, '', 3, 'Desbravador', '2014-07-23', 4),
+(6, '', 12, 'Desbravador', '2013-07-29', 4),
+(17, '', 4, 'Desbravador', '2009-02-01', 2),
 (10, '', 5, 'Desbravador', '2011-05-05', 3),
 (11, '', 6, 'Desbravador', '2011-07-07', 3),
 (12, '', 7, 'Desbravador', '2009-12-12', 3),
-(15, '', 8, 'Desbravador', '', 2),
-(16, '', 9, 'Desbravador', '', 4),
-(21, '', 10, 'Desbravador', '', 5),
-(22, '', 12, 'Desbravador', '', 5),
-(23, '', 12, 'Desbravador', '', 5),
+(15, '', 8, 'Desbravador', '2010-11-26', 2),
+(16, '', 9, 'Desbravador', '2012-01-30', 4),
+(21, '', 10, 'Desbravador', '2012-08-11', 5),
+(22, '', 12, 'Desbravador', '2011-05-25', 5),
+(23, '', 12, 'Desbravador', '2010-02-28', 5),
 (24, '', 13, 'Desbravador', '2014-01-03', 6),
 (25, '', 13, 'Desbravador', '2014-01-03', 6),
 (26, '', 13, 'Desbravador', '2014-01-03', 6);
