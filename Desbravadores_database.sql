@@ -146,6 +146,8 @@ VALUES
 ('Rua Castro Alves', 'Alecrim', '300', 'casa', 'Natal', 'RN', 'Brasil'),
 ('Avenida Beira Canal', 'Tirol', '656', NULL, 'Natal', 'RN', 'Brasil'),
 ('Avenida Leste', 'Cidade Nova', '145', 'apt. 304', 'Natal', 'RN', 'Brasil'),
+('Travessa Félix', 'Felipe Camarão', '333', NULL, 'Natal', 'RN', 'Brasil'),
+('Travessa Indomar', 'Felipe Camarão', '444', NULL, 'Natal', 'RN', 'Brasil'),
 ('Avenida Erivan França', 'Ponta Negra', '6457', 'apt. 202', 'Natal', 'RN', 'Brasil');
 
 INSERT INTO tb_pessoa (nome, cpf, id_endereco, telefone, genero)
@@ -170,7 +172,12 @@ VALUES
 ('Rayla Storm', '38455679203', 15,'84999384611','F'), --desbravador
 ('Antony Stark', '44592834721', 16,'84987945020','M'),
 ('Attea Frog', '11294884763', 9,'84988112233','F'), --desbravador
-();
+('Prue Halliwell', '23277784901', 17,'84988886388','F'),
+('Piper Halliwell', '31388890276', 17,'84988846388','F'),
+('Phoebe Halliwell', '45434587600', 17,'84988826388','F'),
+('Florzinha Utônio', '99440233810', 18,'84988689644','F'),
+('Lindinha Utônio', '99440233811', 18,'84988689644','F'),
+('Docinho Utônio', '99440233812', 18,'84988689644','F');
 
 INSERT INTO tb_doacao(id_doador, valor, metodoPagamento)
 VALUES
@@ -192,7 +199,7 @@ VALUES
 ('Tríade da Ameaça Tripla', 'M', '13-15'),
 ('Amazonas Guerreiras', 'F', '10-12'),
 ('Zurafa Flamejante', 'F', '12-15'),
-('Mancha Azul', 'F', '11-14');
+('Mancha Azul', 'F', '11');
 
 
 INSERT INTO tb_contatoEmergencial (nome, telefone)
@@ -208,22 +215,29 @@ VALUES
 ('Mônica Magalhães','84920350960'),
 ('Selan Duarte','84913568653'),
 ('Athanasios Tsouanas','84945093390'),
-('Rafaela Marinho','84978749321');
+('Rafaela Marinho','84978749321'),
+('Professor Utônio','84988689644');
 
 INSERT INTO tb_membro (id_membro, cargo, id_contatoEmergencial, grupo, dt_nascimento, id_unidade)
 VALUES
-(20, '', , 'Liderança', '1990-10-17', 1),
+(20, '', 1, 'Liderança', '1990-10-17', 1),
 (8, 'Linda', 11, 'Liderança', '2003-06-30', 1),
-(14, '', , 'Liderança', '1989-03-18', 1),
-(1, '', , 'Desbravador', '', 2),
-(18, '', , 'Desbravador', '', 4),
-(6, '', , 'Desbravador', '', 5),
-(17, '', , 'Desbravador', '', 2),
-(10, '', , 'Desbravador', '2011-05-05', 3),
-(11, '', , 'Desbravador', '2011-07-07', 3),
-(12, '', , 'Desbravador', '2009-12-12', 3),
-(15, '', , 'Desbravador', '', 2),
-(16, '', , 'Desbravador', '', 4);
+(14, '', 1, 'Liderança', '1989-03-18', 1),
+(1, '', 2, 'Desbravador', '', 2),
+(18, '', 3, 'Desbravador', '', 4),
+(6, '', 12, 'Desbravador', '', 4),
+(17, '', 4, 'Desbravador', '', 2),
+(10, '', 5, 'Desbravador', '2011-05-05', 3),
+(11, '', 6, 'Desbravador', '2011-07-07', 3),
+(12, '', 7, 'Desbravador', '2009-12-12', 3),
+(15, '', 8, 'Desbravador', '', 2),
+(16, '', 9, 'Desbravador', '', 4),
+(21, '', 10, 'Desbravador', '', 5),
+(22, '', 12, 'Desbravador', '', 5),
+(23, '', 12, 'Desbravador', '', 5),
+(24, '', 13, 'Desbravador', '2014-01-03', 6),
+(25, '', 13, 'Desbravador', '2014-01-03', 6),
+(26, '', 13, 'Desbravador', '2014-01-03', 6);
 
 
 
