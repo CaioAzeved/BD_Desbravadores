@@ -239,10 +239,18 @@ VALUES
 (25, '', 13, 'Desbravador', '2014-01-03', 6),
 (26, '', 13, 'Desbravador', '2014-01-03', 6);
 
-
+INSERT INTO tb_evento (descricao, taxa, organizador, dt_ida, dt_volta)
+VALUES
+('Caminhada de 6km', 24.99, 8, '2025-01-11', '2025-01-11'),
+('Campori Festival', 159.50, 20, '2025-09-24', '2025-09-28'),
+('Visita a Ponta do Seixas em João Pessoa', 99.87, 20, '2025-10-08', '2025-10-09'),
+('Acampamento na floresta da solidão', 47.99, 20, '2025-04-19', '2025-04-20'),
+('Limpeza de praça', 0.0, 14, '2025-06-07', '2025-06-07'),
+('Assalto ao banco central', 10.11, 14, '2025-08-22', '2025-08-22');
 
 
 Select * from tb_endereco;
 Select * from tb_pessoa;
 Select * from tb_contatoEmergencial;
 Select * from tb_doacao;
+Select * from tb_unidade;
