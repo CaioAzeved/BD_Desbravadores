@@ -237,7 +237,7 @@ VALUES
 (5, 55.70,'Pix'),
 (4, 1000,'Pix'),
 (13, 105,'Pix'),
-(19, 30,'Pix')
+(19, 30,'Pix'),
 (14, 200, 'Pix'),
 (20, 201, 'Pix'),
 (7, 25.50,'Dinheiro'),
@@ -274,21 +274,21 @@ VALUES
 (8, 'Capelã', 11, 'Liderança', '2003-06-30', 1),
 (14, 'Conselheiro', 7, 'Liderança', '2000-07-30', 2),
 (27, 'Capitão', 2, 'Desbravador', '2013-02-09', 2),
-(18, 'Capitã', , 'Desbravador', '2014-01-07', 4),
+(18, 'Capitã', 6, 'Desbravador', '2014-01-07', 4),
 (6, 'Conselheira', 1, 'Liderança', '2004-03-17', 4),
 (17, 'Secretário', 12, 'Desbravador', '2014-04-26', 2),
-(10, '', 11, 'Desbravador', '', ),
-(11, '', 6, 'Desbravador', '', ),
-(12, '', 5, 'Desbravador', '', ),
-(15, '', 3, 'Desbravador', '', ),
+--(10, '', 11, 'Desbravador', '', ),
+--(11, '', 6, 'Desbravador', '', ),
+--(12, '', 5, 'Desbravador', '', ),
+--(15, '', 3, 'Desbravador', '', ),
 (16, 'Conselheiro', 2, 'Liderança', '1997-05-26', 4),
-(20, 'Secretária', 4, 'Liderança', '2001-08-25', 1),
-(21, '', 10, 'Desbravador', '2011-08-11', 5),
-(22, '', 12, 'Desbravador', '2011-05-25', 5),
-(23, '', 12, 'Desbravador', '2010-02-28', 5),
-(24, '', 13, 'Desbravador', '2014-01-03', 4),
-(25, '', 13, 'Desbravador', '2014-01-03', 4),
-(26, '', 13, 'Desbravador', '2014-01-03', 4);
+(20, 'Secretária', 4, 'Liderança', '2001-08-25', 1);
+--(21, '', 10, 'Desbravador', '2011-08-11', 5),
+--(22, '', 12, 'Desbravador', '2011-05-25', 5),
+--(23, '', 12, 'Desbravador', '2010-02-28', 5),
+--(24, '', 13, 'Desbravador', '2014-01-03', 4),
+--(25, '', 13, 'Desbravador', '2014-01-03', 4),
+--(26, '', 13, 'Desbravador', '2014-01-03', 4);
 
 INSERT INTO tb_evento (descricao, taxa, organizador, dt_ida, dt_volta)
 VALUES
