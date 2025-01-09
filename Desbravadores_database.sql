@@ -221,7 +221,7 @@ VALUES
 ('Kuroko Tetsuya', '77182304938', 14,'84933242258','M'),   --17
 ('Rayla Storm', '38455679203', 15,'84999384611','F'),      --18
 ('Antony Stark', '44592834721', 16,'84987945020','M'),     --19
-('Attea Frog', '11294884763', 9,'84988112233','F');        --20
+('Attea Frog', '11294884763', 9,'84988112233','F'),        --20
 ('Prue Halliwell', '23277784901', 17,'84988886388','F'),   --21
 ('Piper Halliwell', '31388890276', 17,'84988846388','F'),  --22
 ('Phoebe Halliwell', '45434587600', 17,'84988826388','F'), --23
@@ -266,7 +266,7 @@ VALUES
 ('Mônica Magalhães','84920350960'),    --9
 ('Selan Duarte','84913568653'),        --10
 ('Athanasios Tsouanas','84945093390'), --11
-('Rafaela Marinho','84978749321');     --12
+('Rafaela Marinho','84978749321'),     --12
 ('Professor Utônio','84988689644');    --13
 INSERT INTO tb_membro (id_membro, cargo, id_contatoEmergencial, grupo, dt_nascimento, id_unidade)
 VALUES
