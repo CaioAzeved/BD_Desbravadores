@@ -19,15 +19,16 @@ where not id_pessoa in (Select id_membro
                         from tb_membro); 
 
 /*
-  c) Faça um nova consulta com uma função de agregação, uma operadores lógicos, operadores 
+  c) Faça um nova consulta com uma função de agregação, com operadores lógicos, operadores 
   relacionais onde o resultados seja apresentado em ordem crescente ou decrescente
   Descrição: Ordenar a soma de todas as doações feitas pelas pessoas desde que o valor seja maior 
-  do que 100
+  do que 100 e feito por 'Pix'
 */
-Select sum(valor)
+Select id_doador, sum(valor)
 from tb_doacao
+where valor > 100.00 and metodoPagamento = 'Pix'
 group by id_doador
-where valor > 100.00;
+order by sum(valor) desc;
 
 /*
   d) Faça uma consulta que utilize o GROUP BY e a cláusula HAVING
