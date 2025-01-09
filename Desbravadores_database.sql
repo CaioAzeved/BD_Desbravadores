@@ -267,24 +267,26 @@ VALUES
 ('Selan Duarte','84913568653'),        --10
 ('Athanasios Tsouanas','84945093390'), --11
 ('Rafaela Marinho','84978749321'),     --12
-('Professor Utônio','84988689644');    --13
+('Professor Utônio','84988689644'),   --13
+('Benjamin Tennyson', '84983945676'), --14 
+
 INSERT INTO tb_membro (id_membro, cargo, id_contatoEmergencial, grupo, dt_nascimento, id_unidade)
 VALUES
-(1, 'Diretor', 4, 'Liderança', '1993-09-05', 1),
+(1, 'Diretor', 15, 'Liderança', '1993-09-05', 1),
 (8, 'Capelã', 11, 'Liderança', '2003-06-30', 1),
-(14, 'Conselheiro', 7, 'Liderança', '2000-07-30', 2),
+(14, 'Conselheiro', 14, 'Liderança', '2000-07-30', 2),
 (27, 'Capitão', 2, 'Desbravador', '2013-02-09', 2),
 (18, 'Capitã', 6, 'Desbravador', '2014-01-07', 4),
 (6, 'Conselheira', 1, 'Liderança', '2004-03-17', 4),
 (17, 'Secretário', 12, 'Desbravador', '2014-04-26', 2),
---(10, '', 11, 'Desbravador', '', ),
---(11, '', 6, 'Desbravador', '', ),
---(12, '', 5, 'Desbravador', '', ),
---(15, '', 3, 'Desbravador', '', ),
+--(10, '', 5, 'Desbravador', '2011-05-05', 3),
+--(11, '', 6, 'Desbravador', '2011-07-07', 3),
+--(12, '', 7, 'Desbravador', '2009-12-12', 3),
+--(15, '', 8, 'Desbravador', '2010-11-26', 2),
 (16, 'Conselheiro', 2, 'Liderança', '1997-05-26', 4),
 (20, 'Secretária', 4, 'Liderança', '2001-08-25', 1);
 --(21, '', 10, 'Desbravador', '2011-08-11', 5),
---(22, '', 12, 'Desbravador', '2011-05-25', 5),
+--(22, '', 4, 'Desbravador', '2011-05-25', 5),
 --(23, '', 12, 'Desbravador', '2010-02-28', 5),
 --(24, '', 13, 'Desbravador', '2014-01-03', 4),
 --(25, '', 13, 'Desbravador', '2014-01-03', 4),
