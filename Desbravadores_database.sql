@@ -196,6 +196,8 @@ VALUES
 ('Rua Castro Alves', 'Alecrim', '300', 'casa', 'Natal', 'RN', 'Brasil'),
 ('Avenida Beira Canal', 'Tirol', '656', NULL, 'Natal', 'RN', 'Brasil'),
 ('Avenida Leste', 'Cidade Nova', '145', 'apt. 304', 'Natal', 'RN', 'Brasil'),
+('Travessa Félix', 'Felipe Camarão', '333', NULL, 'Natal', 'RN', 'Brasil'),
+('Travessa Indomar', 'Felipe Camarão', '444', NULL, 'Natal', 'RN', 'Brasil'),
 ('Avenida Erivan França', 'Ponta Negra', '6457', 'apt. 202', 'Natal', 'RN', 'Brasil');
 
 INSERT INTO tb_pessoa (nome, cpf, id_endereco, telefone, genero)
@@ -220,6 +222,13 @@ VALUES
 ('Rayla Storm', '38455679203', 15,'84999384611','F'),      --18
 ('Antony Stark', '44592834721', 16,'84987945020','M'),     --19
 ('Attea Frog', '11294884763', 9,'84988112233','F');        --20
+('Prue Halliwell', '23277784901', 17,'84988886388','F'),   --21
+('Piper Halliwell', '31388890276', 17,'84988846388','F'),  --22
+('Phoebe Halliwell', '45434587600', 17,'84988826388','F'), --23
+('Florzinha Utônio', '99440233810', 18,'84988689644','F'), --24
+('Lindinha Utônio', '99440233811', 18,'84988689644','F'),  --25
+('Docinho Utônio', '99440233812', 18,'84988689644','F'),   --26
+('Son Goku', '23985283754', 2, '84992347658', 'M');        --27
 
 INSERT INTO tb_doacao(id_doador, valor, metodoPagamento)
 VALUES
@@ -228,18 +237,20 @@ VALUES
 (5, 55.70,'Pix'),
 (4, 1000,'Pix'),
 (13, 105,'Pix'),
-(19, 30,'Pix'),
+(19, 30,'Pix')
+(14, 200, 'Pix'),
+(20, 201, 'Pix'),
 (7, 25.50,'Dinheiro'),
 (3, 10.50,'Dinheiro');
 
 INSERT INTO tb_unidade (nome, genero, faixa_etaria)
 VALUES
-('Serpentes Marinhas', 'L', '16+'),
-('Arraias', 'F', '10-11'),
-('Tubarões', 'M', '10-12'),
-('Tartarugas', 'F', '12-13'),
-('Estrelas', 'F', '14-15'),
-('Agulhão', 'M', '13-15');
+('Avante Desbravadores', 'L', '16+'),
+('Bando do Falcão', 'M', '10-12'),
+('Tríade da Ameaça Tripla', 'M', '13-15'),
+('Amazonas Guerreiras', 'F', '10-11'),
+('Zurafa Flamejante', 'F', '12-13'),
+('Mancha Azul', 'F', '14-15');
 
 
 INSERT INTO tb_contatoEmergencial (nome, telefone)
@@ -256,13 +267,13 @@ VALUES
 ('Selan Duarte','84913568653'),        --10
 ('Athanasios Tsouanas','84945093390'), --11
 ('Rafaela Marinho','84978749321');     --12
-
+('Professor Utônio','84988689644');    --13
 INSERT INTO tb_membro (id_membro, cargo, id_contatoEmergencial, grupo, dt_nascimento, id_unidade)
 VALUES
-(20, 'Diretor', 4, 'Liderança', '1993-09-05', 1),
+(1, 'Diretor', 4, 'Liderança', '1993-09-05', 1),
 (8, 'Capelã', 11, 'Liderança', '2003-06-30', 1),
 (14, 'Conselheiro', 7, 'Liderança', '2000-07-30', 3),
-(1, 'Capitão', 2, 'Desbravador', '2013-02-09', 3),
+(27, 'Capitão', 2, 'Desbravador', '2013-02-09', 3),
 (18, 'Capitã', , 'Desbravador', '2014-01-07', 2),
 (6, 'Conselheira', 1, 'Liderança', '2004-03-17', 2),
 (17, 'Secretário', 12, 'Desbravador', '2014-04-26', 3),
@@ -271,4 +282,26 @@ VALUES
 (12, '', 5, 'Desbravador', '', ),
 (15, '', 3, 'Desbravador', '', ),
 (16, 'Conselheiro', 2, 'Liderança', '1997-05-26', 6),
-(20, 'Secretária', 4, 'Liderança', '2001-08-25', 1);
+(20, 'Secretária', 4, 'Liderança', '2001-08-25', 1),
+(21, '', 10, 'Desbravador', '2012-08-11', 5),
+(22, '', 12, 'Desbravador', '2011-05-25', 5),
+(23, '', 12, 'Desbravador', '2010-02-28', 5),
+(24, '', 13, 'Desbravador', '2014-01-03', 6),
+(25, '', 13, 'Desbravador', '2014-01-03', 6),
+(26, '', 13, 'Desbravador', '2014-01-03', 6);
+
+INSERT INTO tb_evento (descricao, taxa, organizador, dt_ida, dt_volta)
+VALUES
+('Caminhada de 6km', 24.99, 8, '2025-01-11', '2025-01-11'),
+('Campori Festival', 159.50, 20, '2025-09-24', '2025-09-28'),
+('Visita a Ponta do Seixas em João Pessoa', 99.87, 20, '2025-10-08', '2025-10-09'),
+('Acampamento na floresta da solidão', 47.99, 20, '2025-04-19', '2025-04-20'),
+('Limpeza de praça', 0.0, 14, '2025-06-07', '2025-06-07'),
+('Assalto ao banco central', 10.11, 14, '2025-08-22', '2025-08-22');
+
+
+Select * from tb_endereco;
+Select * from tb_pessoa;
+Select * from tb_contatoEmergencial;
+Select * from tb_doacao;
+Select * from tb_unidade;
