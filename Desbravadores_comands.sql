@@ -82,7 +82,7 @@ inner join tb_membro m
 on p.id_pessoa = m.id_membro
 inner join tb_doacao d
 on m.id_membro = d.id_doador
-
+order by valor;
 /*
   i)Crie uma função que retorna a uma tabela. A função deve ter condições.
   Descrição: Retornar a tabela das especialidades desde que o número de membros que as possuem seja maior ou igual a 3
