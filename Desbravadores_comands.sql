@@ -3,29 +3,36 @@
   a)Faça uma consulta que contenha pelo menos dois operadores especiais (BETWEEN, LIKE, IN).
   Descrição: Retornar todos os aniversariantes de janeiro da liderança.
 */
-SELECT *
-FROM tb_membro
-WHERE TO_CHAR(dt_nascimento, 'MM-DD') BETWEEN '01-01' AND '01-31'
-  AND cargo LIKE 'Liderança';
+Select *
+from tb_membro
+where TO_CHAR(dt_nascimento, 'MM-DD') between '01-01' and '01-31'
+  and cargo like 'Liderança';
 
 /*
   b) Faça 1 consulta com funções de agregação e utilize também operadores lógicos e
   especiais (cada consulta deve ter uma função de agregação diferente)
   Descrição: Contar quantas pessoas não são membros do clube.
 */
-Select count(*) from tb_pessoa where not id_pessoa in (Select id_membro from tb_membro); 
+Select count(*) 
+from tb_pessoa 
+where not id_pessoa in (Select id_membro 
+                        from tb_membro); 
 
 /*
   c) Faça um nova consulta com uma função de agregação, uma operadores lógicos, operadores 
   relacionais onde o resultados seja apresentado em ordem crescente ou decrescente
-  Descrição: Ordenar a soma de todas as doações feitas pelas pessoas desde que o valor seja maior do que 100
+  Descrição: Ordenar a soma de todas as doações feitas pelas pessoas desde que o valor seja maior 
+  do que 100
 */
-
+Select sum(valor)
+from tb_doacao
+group by id_doador
+where valor > 100.00;
 
 /*
   d) Faça uma consulta que utilize o GROUP BY e a cláusula HAVING
-  Descrição: Agrupar membros pelo grupo e ordenar pela soma das especialidades, desde que a soma seja 
-  maior do que 5
+  Descrição: Agrupar membros pelo grupo e ordenar pela soma das especialidades, desde que a soma 
+  seja maior do que 5
 */
 
 
