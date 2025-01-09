@@ -35,54 +35,54 @@ order by sum(valor) desc;
   Descrição: Agrupar membros pelo id e ordenar pela quantidade de especialidades, desde que ela seja 
   maior do que 5
 */
-select p.nome, count(e.id_especialidade) as total_especialidade from tb_membro m, tb_pessoa p, tb_membro_especialidade e
-where e.id_membro = m.id_membro
-and p.id_pessoa = m.id_membro
+Select p.nome, count(e.id_especialidade) as total_especialidade 
+from tb_membro m, tb_pessoa p, tb_membro_especialidade e
+where e.id_membro = m.id_membro and p.id_pessoa = m.id_membro
 group by m.id_membro
-having count(e.id_especialidade) > 5
+having count(e.id_especialidade) > 5;
 
 /*
   e) Faça uma consulta utilizando INNER JOIN
   Descrição: Recuperar o nome dos contatos de emergência de membros do clube e que também pertencem ao clube
 */
-select c.nome from
-tb_pessoa p
-inner join
-tb_membro m on m.id_membro = p.id_pessoa
+Select c.nome 
+from tb_pessoa p
+inner join tb_membro m 
+  on m.id_membro = p.id_pessoa
 inner join tb_contatoEmergencial c
-on p.nome = c.nome
-; 
+  on p.nome = c.nome;
 
 /*
   f) Faça uma consulta utilizando LEFT JOIN
   Descrição: Recuperar o nome e o cargo de todas as pessoas
 */
-select p.nome, m.cargo from
-tb_pessoa p
+Select p.nome, m.cargo 
+from tb_pessoa p
 left join tb_membro m
-on p.id_pessoa = m.id_membro;
+  on p.id_pessoa = m.id_membro;
 
 /*
   g) Faça uma consulta utilizando RIGHT JOIN
   Descrição: Recuperar o nome e a doação de todas as pessoas
 */
-select p.nome, d.valor from
-tb_doacao d
+Select p.nome, d.valor 
+from tb_doacao d
 right join tb_pessoa p
-on p.id_pessoa = d.id_doador;
+  on p.id_pessoa = d.id_doador;
 
 /*
   h) Faça um consulta com a união de 3 tabelas (utilize qualquer JOIN) e que seu resultado
   seja de ordem crescente
   Descrição: Conseguir o nome dos membros que fizeram doações
 */
-select p.nome, d.valor FROM
-tb_pessoa p
+Select p.nome, d.valor 
+from tb_pessoa p
 inner join tb_membro m
-on p.id_pessoa = m.id_membro
+  on p.id_pessoa = m.id_membro
 inner join tb_doacao d
-on m.id_membro = d.id_doador
+  on m.id_membro = d.id_doador
 order by valor;
+
 /*
   i)Crie uma função que retorna a uma tabela. A função deve ter condições.
   Descrição: Retornar a tabela das especialidades desde que o número de membros que as possuem seja maior ou igual a 3
