@@ -33,13 +33,13 @@ order by sum(valor) desc;
 /*
   d) Faça uma consulta que utilize o GROUP BY e a cláusula HAVING
   Descrição: Agrupar membros pelo id e ordenar pela quantidade de especialidades, desde que ela seja 
-  maior do que 5
+  maior do que 1
 */
 Select p.nome, count(e.id_especialidade) as total_especialidade 
 from tb_membro m, tb_pessoa p, tb_membro_especialidade e
 where e.id_membro = m.id_membro and p.id_pessoa = m.id_membro
-group by m.id_membro
-having count(e.id_especialidade) > 5;
+group by p.nome, m.id_membro
+having count(e.id_especialidade) > 1;
 
 /*
   e) Faça uma consulta utilizando INNER JOIN
