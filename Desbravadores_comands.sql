@@ -159,10 +159,24 @@ $$ LANGUAGE plpgsql;
 /*
   l) Crie uma função da sua preferência que utilize funções de agregação (AVG, SUM,
   COUNT, MIN ou MAX) operadores especiais, relacionais, JOIN, GROUP BY e ORDER BY)
-  Descrição:
+  Descrição: Uma função que retorna a tabela com o total de doações em um certo período de tempo
+  ordenadas de forma decrescente.
 */
-
-
+CREATE OR REPLACE FUNCTION total_doacoes_em (data_inicio DATE, data_fim DATE)
+RETURNS TABLE (id_doador INTEGER, nome VARCHAR, total_doacoes DECIMAL(10,2)) AS $$
+BEGIN
+  RETURN QUERY
+  Select 
+    d.id_doador, 
+    p.nome,
+    sum(d.valor) as total_doacoes
+  from tb_doacao d
+  inner join tb_pessoa p on d.id_doador = p.id_pessoa
+  where d.criado_em::DATE between data_inicio and data_fim
+  group by d.id_doador, p.nome
+  order by total_doacoes desc;
+END;
+$$ LANGUAGE plpgsql;
 
 /*
   m) Crie um trigger que dispare dados em alguma tabela após de alguma ação no banco de dados
