@@ -128,7 +128,32 @@ $$ LANGUAGE plpgsql;
   j) Crie uma função que processam um conjunto de valores e retornam um valor
   Descrição: Será passado um array com os ids das doações e será retornado o nome do doador que fez a maior doação
 */
+CREATE OR REPLACE FUNCTION doador_maior_doacao(doacoes_ids INTEGER[])
+RETURNS TEXT AS $$
+DECLARE
+  id_maior_doador INTEGER;
+  nome_doador VARCHAR;
+  maior_valor DECIMAL(10,2);
+BEGIN
+  -- Encontra o ID da doação com o maior valor dentro dos IDs passados
+  SELECT d.id_doador, MAX(d.valor)
+  INTO id_maior_doador, maior_valor
+  FROM tb_doacao d
+  WHERE d.id_doacao = ANY(doacoes_ids)  -- Filtra pelas doações com os IDs passados
+  GROUP BY d.id_doador
+  ORDER BY MAX(d.valor) DESC
+  LIMIT 1;  -- Limita a um único resultado (o maior)
 
+  -- Busca o nome do doador
+  SELECT p.nome
+  INTO nome_doador
+  FROM tb_pessoa p
+  WHERE p.id_pessoa = id_maior_doador;
+
+  -- Retorna o nome do doador com o valor da maior doação
+  RETURN nome_doador || ' - (' || maior_valor || ')';
+END;
+$$ LANGUAGE plpgsql;
 
 /*
   k) Crie uma função VOID (Não retorna a nenhum valor mas executa alguma operação)
