@@ -207,3 +207,22 @@ EXECUTE FUNCTION validar_instrutor();
   n) Crie um trigger de verificação antes de executar alguma ação no banco de dados.
   Descrição: trigger para verificar se um desbravador pode virar da liderança.
 */
+CREATE OR REPLACE FUNCTION check_age_to_Lideranca()
+RETURNS TRIGGER AS $$
+BEGIN
+  -- Verifica se o membro é do grupo 'Desbravador' e completou 16 anos
+  IF NEW.grupo = 'Desbravador' AND
+    AGE(CURRENT_DATE, NEW.dt_nascimento) >= INTERVAL '16 years' THEN
+    -- Atualiza o grupo para 'Liderança'
+    NEW.grupo := 'Liderança';
+    -- Define o cargo como NULL
+    NEW.cargo := NULL;
+  END IF;
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_trocar_grupo
+BEFORE INSERT OR UPDATE ON tb_membro
+FOR EACH ROW
+EXECUTE FUNCTION check_age_to_Lideranca();
