@@ -260,18 +260,18 @@ VALUES
 (18, 'Capitã', 6, 'Desbravador', '2014-01-07', 4),
 (6, 'Conselheira', 1, 'Liderança', '2004-03-17', 4),
 (17, 'Secretário', 12, 'Desbravador', '2014-04-26', 2),
---(10, '', 5, 'Desbravador', '2011-05-05', 3),
---(11, '', 6, 'Desbravador', '2011-07-07', 3),
---(12, '', 7, 'Desbravador', '2009-12-12', 3),
---(15, '', 8, 'Desbravador', '2010-11-26', 2),
+(10, 'Tesouteiro', 5, 'Desbravador', '2011-05-05', 3),
+(11, 'Conselheiro', 6, 'Desbravador', '2011-07-07', 3),
+(12, 'Instrutor', 7, 'Desbravador', '2009-12-12', 3),
+(15, 'Conselheiro', 8, 'Desbravador', '2010-11-26', 2),
 (16, 'Conselheiro', 2, 'Liderança', '1997-05-26', 4),
-(20, 'Secretária', 4, 'Liderança', '2001-08-25', 1);
---(21, '', 10, 'Desbravador', '2011-08-11', 5),
---(22, '', 4, 'Desbravador', '2011-05-25', 5),
---(23, '', 12, 'Desbravador', '2010-02-28', 5),
---(24, '', 13, 'Desbravador', '2014-01-03', 4),
---(25, '', 13, 'Desbravador', '2014-01-03', 4),
---(26, '', 13, 'Desbravador', '2014-01-03', 4);
+(20, 'Secretária', 4, 'Liderança', '2001-08-25', 1),
+(21, 'Conselheiro', 10, 'Desbravador', '2011-08-11', 5),
+(22, 'Conselheiro', 4, 'Desbravador', '2011-05-25', 5),
+(23, 'Conselheiro', 12, 'Desbravador', '2010-02-28', 5),
+(24, 'Conselheiro', 13, 'Desbravador', '2014-01-03', 4),
+(25, 'Conselheiro', 13, 'Desbravador', '2014-01-03', 4),
+(26, 'Conselheiro', 13, 'Desbravador', '2014-01-03', 4);
 
 INSERT INTO tb_evento (descricao, taxa, organizador, dt_ida, dt_volta)
 VALUES
@@ -281,6 +281,51 @@ VALUES
 ('Acampamento na floresta da solidão', 47.99, 20, '2025-04-19', '2025-04-20'),
 ('Limpeza de praça', 0.0, 14, '2025-06-07', '2025-06-07'),
 ('Assalto ao banco central', 10.11, 14, '2025-08-22', '2025-08-22');
+
+INSERT INTO tb_especialidade(codigo, nome, area, nivel, ano, instituicao) 
+VALUES
+(1, 'Alívio da Fome', 'AD', 1, '2005', 'Associação Geral'),
+(17, 'Sistema Nervoso', 'CS', 3, '1999', 'Associação Geral'),
+(13, 'Temperança', 'AM', 3, '1976', 'Associação Geral'),
+(7, 'Ótica', 'CS', 2, '1962', 'Associação Geral'),
+(2, 'Jardinagem e Horticultura', 'AA', 2, '1928', 'Associação Geral'),
+(9, 'Frutas Pequenas', 'AA', 2, '1929', 'Associação Geral');
+
+INSERT INTO tb_classe(nome) 
+VALUES
+('Amigo'),
+('Companheiro'),
+('Pesquisador'),
+('Pioneiro'),
+('Excursionista'),
+('Guia');
+
+INSERT INTO tb_membro_evento(id_membro, id_evento, taxaSituacao) 
+VALUES
+(20, 2, 'Pago'),
+(8, 3,'Isento'),
+(10, 4,'Pendente'),
+(11, 5,'Pago'),
+(12, 6,'Pendente'),
+(14, 1,'Pago');
+
+INSERT INTO tb_membro_classe(id_membro, id_classe) 
+VALUES
+(20, 2),
+(8, 3),
+(10, 4),
+(11, 5),
+(12, 6),
+(14, 1);
+
+INSERT INTO tb_membro_especialidade(id_membro, id_especialidade, id_instrutor) 
+VALUES
+(20, 2, 21),
+(8, 3, 22),
+(10, 4, 23),
+(11, 5, 24),
+(12, 6, 25),
+(14, 1, 26);
 
 
 Select * from tb_endereco;
