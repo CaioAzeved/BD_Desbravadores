@@ -84,10 +84,43 @@ inner join tb_doacao d
 order by valor;
 
 /*
-  i)Crie uma função que retorna a uma tabela. A função deve ter condições.
-  Descrição: Retornar a tabela das especialidades desde que o número de membros que as possuem seja maior ou igual a 3
+  i)Crie uma função que retorna uma tabela. A função deve ter condições.
+  Descrição: Retornar a tabela das especialidades ou das classes de um certo membro
 */
+CREATE OR REPLACE FUNCTION show_membro_info (id_membro_param INTEGER, tipo TEXT)
+RETURNS TABLE (nome_membro VARCHAR, id INTEGER, nome VARCHAR) AS $$
+BEGIN
+    -- Verifica o tipo solicitado
+    IF tipo = 'Classes' THEN
+        -- Retorna as classes associadas ao membro, junto com o nome do membro
+        RETURN QUERY
+        Select 
+            m.nome as nome_membro, 
+            c.id_classe as id, 
+            c.nome
+        from tb_classe c
+        join tb_membro_classe mc on mc.id_classe = c.id_classe
+        join tb_membro m on m.id_membro = mc.id_membro
+        where m.id_membro = id_membro_param;
 
+    ELSIF tipo = 'Especialidades' THEN
+        -- Retorna as especialidades associadas ao membro, junto com o nome do membro
+        RETURN QUERY
+        Select 
+            m.nome as nome_membro, 
+            e.codigo as id, 
+            e.nome || ' (' || e.area || ')' as nome
+        from tb_especialidade e
+        join tb_membro_especialidade me on me.id_especialidade = e.codigo
+        join tb_membro m on m.id_membro = me.id_membro
+        where m.id_membro = id_membro_param;
+
+    ELSE
+        -- Lança um erro se o tipo não for válido
+        RAISE EXCEPTION 'Tipo inválido. Use "Classes" ou "Especialidades".';
+    END IF;
+END;
+$$ LANGUAGE plpgsql;
 
 /*
   j) Crie uma função que processam um conjunto de valores e retornam a um valor
