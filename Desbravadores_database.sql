@@ -268,8 +268,9 @@ VALUES
 ('Selan Duarte','84913568653'),        --10
 ('Athanasios Tsouanas','84945093390'), --11
 ('Rafaela Marinho','84978749321'),     --12
-('Professor Utônio','84988689644'),   --13
-('Benjamin Tennyson', '84983945676'), --14 
+('Professor Utônio','84988689644'),    --13
+('Benjamin Tennyson', '84983945676'),  --14
+('Jandilson Cunha', '84984327640');    --15
 
 INSERT INTO tb_membro (id_membro, cargo, id_contatoEmergencial, grupo, dt_nascimento, id_unidade)
 VALUES
