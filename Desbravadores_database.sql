@@ -145,27 +145,6 @@ BEGIN
 END;
 $$;
 
-CREATE OR REPLACE FUNCTION validar_instrutor()
-RETURNS TRIGGER AS $$
-BEGIN
-    -- Verifica se o instrutor pertence ao grupo 'Liderança'
-    IF NOT EXISTS (
-        SELECT 1
-        FROM tb_membro
-        WHERE id_membro = NEW.id_instrutor AND grupo = 'Liderança'
-    ) THEN
-        RAISE EXCEPTION 'Instrutor % não pertence ao grupo Liderança', NEW.id_instrutor;
-    END IF;
-
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
-CREATE TRIGGER validar_instrutor_trigger
-BEFORE INSERT OR UPDATE ON tb_membro_especialidade
-FOR EACH ROW
-EXECUTE FUNCTION validar_instrutor();
-
 COMMENT ON COLUMN tb_pessoa.genero IS 'M or F';
 
 COMMENT ON COLUMN tb_membro.grupo IS 'Desbravador ou Liderança';

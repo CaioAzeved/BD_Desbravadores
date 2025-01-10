@@ -166,10 +166,28 @@ $$ LANGUAGE plpgsql;
 
 /*
   m) Crie um trigger que dispare dados em alguma tabela após de alguma ação no banco de dados
-  Descrição: Trigger colocará as datas de atualização de um dado automaticamente após a dar update
-  neste.
+  Descrição: Trigger que checará se o instrutor pertence ao grupo 'Liderança'
 */
+CREATE OR REPLACE FUNCTION validar_instrutor()
+RETURNS TRIGGER AS $$
+BEGIN
+  -- Verifica se o instrutor pertence ao grupo 'Liderança'
+  IF NOT EXISTS (
+    Select 1
+    from tb_membro
+    where id_membro = NEW.id_instrutor AND grupo = 'Liderança'
+  ) THEN
+    RAISE EXCEPTION 'Instrutor % não pertence ao grupo Liderança', NEW.id_instrutor;
+  END IF;
 
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER validar_instrutor_trigger
+BEFORE INSERT OR UPDATE ON tb_membro_especialidade
+FOR EACH ROW
+EXECUTE FUNCTION validar_instrutor();
 
 /*
   n) Crie um trigger de verificação antes de executar alguma ação no banco de dados.
