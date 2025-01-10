@@ -61,6 +61,7 @@ CREATE TABLE tb_membro (
 
 CREATE TABLE tb_especialidade (
   codigo integer PRIMARY KEY,
+  nome varchar,
   area varchar(2) NOT NULL,
   nivel int NOT NULL,
   ano varchar(4) NOT NULL,
