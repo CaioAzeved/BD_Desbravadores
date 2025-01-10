@@ -95,24 +95,26 @@ BEGIN
         -- Retorna as classes associadas ao membro, junto com o nome do membro
         RETURN QUERY
         Select 
-            m.nome as nome_membro, 
+            p.nome as nome_membro, 
             c.id_classe as id, 
             c.nome
         from tb_classe c
         join tb_membro_classe mc on mc.id_classe = c.id_classe
         join tb_membro m on m.id_membro = mc.id_membro
+		join tb_pessoa p on p.id_pessoa = m.id_membro
         where m.id_membro = id_membro_param;
 
     ELSIF tipo = 'Especialidades' THEN
         -- Retorna as especialidades associadas ao membro, junto com o nome do membro
         RETURN QUERY
         Select 
-            m.nome as nome_membro, 
+            p.nome as nome_membro, 
             e.codigo as id, 
-            e.nome || ' (' || e.area || ')' as nome
+            (e.nome || ' (' || e.area || ')')::VARCHAR as nome
         from tb_especialidade e
         join tb_membro_especialidade me on me.id_especialidade = e.codigo
         join tb_membro m on m.id_membro = me.id_membro
+		join tb_pessoa p on p.id_pessoa = m.id_membro
         where m.id_membro = id_membro_param;
 
     ELSE
@@ -121,6 +123,7 @@ BEGIN
     END IF;
 END;
 $$ LANGUAGE plpgsql;
+
 
 /*
   j) Crie uma função que processam um conjunto de valores e retornam a um valor
