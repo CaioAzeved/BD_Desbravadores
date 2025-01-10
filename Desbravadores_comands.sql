@@ -134,7 +134,27 @@ $$ LANGUAGE plpgsql;
   k) Crie uma função VOID (Não retorna a nenhum valor mas executa alguma operação)
   Descrição: Modificar o cargo de algum membro
 */
+CREATE OR REPLACE FUNCTION change_cargo (id_membro_param INTEGER, new_cargo TEXT)
+RETURNS void AS $$
+BEGIN
+  -- Verifica se o membro existe
+  IF NOT EXISTS (
+    Select 1
+    from tb_membro
+    where id_membro = id_membro_param
+  ) THEN
+    RAISE EXCEPTION 'Membro com ID % não encontrado.', id_membro_param;
+  END IF;
 
+  -- Atualiza o cargo do membro
+  UPDATE tb_membro
+  SET cargo = new_cargo
+  where id_membro = id_membro_param;
+
+  -- Mensagem de confirmação
+  RAISE NOTICE 'Cargo do membro com ID % alterado para %.', id_membro_param, new_cargo;
+END;
+$$ LANGUAGE plpgsql;
 
 /*
   l) Crie uma função da sua preferência que utilize funções de agregação (AVG, SUM,
