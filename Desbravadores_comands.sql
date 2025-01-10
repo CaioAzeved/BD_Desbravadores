@@ -90,43 +90,42 @@ order by valor;
 CREATE OR REPLACE FUNCTION show_membro_info (id_membro_param INTEGER, tipo TEXT)
 RETURNS TABLE (nome_membro VARCHAR, id INTEGER, nome VARCHAR) AS $$
 BEGIN
-    -- Verifica o tipo solicitado
-    IF tipo = 'Classes' THEN
-        -- Retorna as classes associadas ao membro, junto com o nome do membro
-        RETURN QUERY
-        Select 
-            p.nome as nome_membro, 
-            c.id_classe as id, 
-            c.nome
-        from tb_classe c
-        join tb_membro_classe mc on mc.id_classe = c.id_classe
-        join tb_membro m on m.id_membro = mc.id_membro
-		join tb_pessoa p on p.id_pessoa = m.id_membro
-        where m.id_membro = id_membro_param;
+  -- Verifica o tipo solicitado
+  IF tipo = 'Classes' THEN
+    -- Retorna as classes associadas ao membro, junto com o nome do membro
+    RETURN QUERY
+    Select 
+      p.nome as nome_membro, 
+      c.id_classe as id, 
+      c.nome
+    from tb_classe c
+    join tb_membro_classe mc on mc.id_classe = c.id_classe
+    join tb_membro m on m.id_membro = mc.id_membro
+    join tb_pessoa p on p.id_pessoa = m.id_membro
+    where m.id_membro = id_membro_param;
 
-    ELSIF tipo = 'Especialidades' THEN
-        -- Retorna as especialidades associadas ao membro, junto com o nome do membro
-        RETURN QUERY
-        Select 
-            p.nome as nome_membro, 
-            e.codigo as id, 
-            (e.nome || ' (' || e.area || ')')::VARCHAR as nome
-        from tb_especialidade e
-        join tb_membro_especialidade me on me.id_especialidade = e.codigo
-        join tb_membro m on m.id_membro = me.id_membro
-		join tb_pessoa p on p.id_pessoa = m.id_membro
-        where m.id_membro = id_membro_param;
+  ELSIF tipo = 'Especialidades' THEN
+    -- Retorna as especialidades associadas ao membro, junto com o nome do membro
+    RETURN QUERY
+    Select 
+      p.nome as nome_membro, 
+      e.codigo as id, 
+      (e.nome || ' (' || e.area || ')')::VARCHAR as nome
+    from tb_especialidade e
+    join tb_membro_especialidade me on me.id_especialidade = e.codigo
+    join tb_membro m on m.id_membro = me.id_membro
+    join tb_pessoa p on p.id_pessoa = m.id_membro
+    where m.id_membro = id_membro_param;
 
-    ELSE
-        -- Lança um erro se o tipo não for válido
-        RAISE EXCEPTION 'Tipo inválido. Use "Classes" ou "Especialidades".';
-    END IF;
+  ELSE
+    -- Lança um erro se o tipo não for válido
+    RAISE EXCEPTION 'Tipo inválido. Use "Classes" ou "Especialidades".';
+  END IF;
 END;
 $$ LANGUAGE plpgsql;
 
-
 /*
-  j) Crie uma função que processam um conjunto de valores e retornam a um valor
+  j) Crie uma função que processam um conjunto de valores e retornam um valor
   Descrição: Será passado um array com os ids das doações e será retornado o nome do doador que fez a maior doação
 */
 
